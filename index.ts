@@ -1,5 +1,5 @@
-import { removeElement } from "./problems/removeElement";
+import { majorityElement } from "./problems/majorityElement";
 
-const result = removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2);
+const result = majorityElement([1, 1, 2, 2, 1, 2, 3, 1]);
 
 console.log(result);
