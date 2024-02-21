@@ -1,5 +1,5 @@
-import { majorityElement } from "./problems/majorityElement";
+import { canJump } from "./problems/maxJump";
 
-const result = majorityElement([1, 1, 2, 2, 1, 2, 3, 1]);
+const result = canJump([3, 2, 1, 0, 4]);
 
 console.log(result);
