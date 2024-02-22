@@ -1,5 +1,5 @@
-import { canJump } from "./problems/maxJump";
+import { jump } from "./problems/maxJump2";
 
-const result = canJump([3, 2, 1, 0, 4]);
+const result = jump([2, 3, 1, 0, 4]);
 
 console.log(result);
