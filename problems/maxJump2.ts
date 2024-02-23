@@ -1,18 +1,30 @@
 function jump(nums: number[]): number {
-    let value: number = 0;
+
+    if (nums.length === 1) return 0;
+
+    let currPtr: number = 0;
+    let nextMaximumPtr: number = 0;
     let count: number = 0;
+    let isNextMaximumPtrUpdated = false;
 
-    for (let i: number = 0; i < nums.length; i++) {
-        let currentValue: number = nums[i];
-        if (i === nums.length - 1) return count;
-
-        if (value < currentValue) {
-            value = currentValue;
-            count++;
+    function helper(currPtr: number) {
+        count++;
+        for (let i: number = currPtr + 1; i <= nums[currPtr] + currPtr; i++) {
+            if (i === nums.length - 1) return count;
+            if (nums[i] >= nums[nextMaximumPtr]) {
+                nextMaximumPtr = i;
+                isNextMaximumPtrUpdated = true;
+            }
         }
 
-        value--;
+        if (!isNextMaximumPtrUpdated) {
+            nextMaximumPtr = nums[currPtr] + currPtr;
+            // isNextMaximumPtrUpdated = false;
+        }
+        helper(nextMaximumPtr);
     }
+
+    helper(currPtr);
 
     return count;
 }
