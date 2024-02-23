@@ -1,32 +1,23 @@
 function jump(nums: number[]): number {
+    let n = nums.length;
+    if (n == 1) return 0;
 
-    if (nums.length === 1) return 0;
+    let jumps = 1;
+    let reachable = nums[0];
+    let max_within_reachable = nums[0];
+    if (reachable >= n - 1) return jumps;
 
-    let currPtr: number = 0;
-    let nextMaximumPtr: number = 0;
-    let count: number = 0;
-    let isNextMaximumPtrUpdated = false;
+    for (let i = 1; i < n; i++) {
+        max_within_reachable = Math.max(max_within_reachable, i + nums[i]);
 
-    function helper(currPtr: number) {
-        count++;
-        for (let i: number = currPtr + 1; i <= nums[currPtr] + currPtr; i++) {
-            if (i === nums.length - 1) return count;
-            if (nums[i] >= nums[nextMaximumPtr]) {
-                nextMaximumPtr = i;
-                isNextMaximumPtrUpdated = true;
-            }
+        if (i == reachable) {
+            reachable = max_within_reachable;
+            jumps++;
+            if (reachable >= n - 1) break;
         }
-
-        if (!isNextMaximumPtrUpdated) {
-            nextMaximumPtr = nums[currPtr] + currPtr;
-            // isNextMaximumPtrUpdated = false;
-        }
-        helper(nextMaximumPtr);
     }
 
-    helper(currPtr);
-
-    return count;
+    return jumps;
 }
 
 export { jump };
