@@ -1,5 +1,5 @@
-import { jump } from "./problems/maxJump2";
+import { lengthOfLastWord } from "./problems/lengthOfLastWord";
 
-const result = jump([1,3,2, 0, 1, 5]);
+const result = lengthOfLastWord("   fly me   to   the moon  ");
 
 console.log(result);
