@@ -1,5 +1,10 @@
-import { lengthOfLastWord } from "./problems/lengthOfLastWord";
+import { RandomizedSet } from "./problems/randomizedSet";
 
-const result = lengthOfLastWord("   fly me   to   the moon  ");
-
-console.log(result);
+var obj = new RandomizedSet();
+console.log(obj.insert(1));
+console.log(obj.remove(2));
+console.log(obj.insert(2));
+console.log(obj.getRandom());
+console.log(obj.remove(1));
+console.log(obj.insert(2));
+console.log(obj.getRandom());
