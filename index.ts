@@ -1,5 +1,5 @@
-import { lengthOfLastWord } from "./problems/lengthOfLastWord";
+import { productExceptSelf } from "./problems/productOfArrayExceptSelf";
 
-const result = lengthOfLastWord("   fly me   to   the moon  ");
+const result = productExceptSelf([1, 2, 3, 4]);
 
 console.log(result);
