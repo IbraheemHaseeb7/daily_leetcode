@@ -1,5 +1,5 @@
-import { productExceptSelf } from "./problems/productOfArrayExceptSelf";
+import { titleToNumber } from "./problems/excelColumnNumber";
 
-const result = productExceptSelf([1, 2, 3, 4]);
+const result = titleToNumber("ZY");
 
 console.log(result);
