@@ -1,10 +1,5 @@
-import { RandomizedSet } from "./problems/randomizedSet";
+import { combinationSum } from "./problems/CombinationSum";
 
-var obj = new RandomizedSet();
-console.log(obj.insert(1));
-console.log(obj.remove(2));
-console.log(obj.insert(2));
-console.log(obj.getRandom());
-console.log(obj.remove(1));
-console.log(obj.insert(2));
-console.log(obj.getRandom());
+const result = combinationSum([2, 3, 5], 8);
+
+console.log(result);
