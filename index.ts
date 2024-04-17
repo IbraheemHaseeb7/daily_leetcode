@@ -1,5 +1,5 @@
-import { combinationSum } from "./problems/CombinationSum";
+import { countNumbersWithUniqueDigits } from "./problems/CountNumberWithUniqueDigits";
 
-const result = combinationSum([2, 3, 5], 8);
+const result = countNumbersWithUniqueDigits(2);
 
 console.log(result);
